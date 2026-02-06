@@ -19,5 +19,9 @@ export const useBookStore = defineStore('book', () => {
     books.value = books.value.filter((b) => b.id !== id)
   }
 
+  function getBookById(id: number): Book | undefined {
+    return books.value.find((b) => b.id === id)
+  }
+
   return { books, bookCount, addBook, removeBook }
 })
