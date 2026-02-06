@@ -8,5 +8,16 @@ export const useBookStore = defineStore('book', () => {
     { id: 2, title: 'Book B', author: 'Author B' }
   ])
 
-  return { books }
+  let nextId = 3
+  const bookCount = computed(() => books.value.length)
+
+  function addBook(title: string, author: string) {
+    books.value.push({ id: nextId++, title, author })
+  }
+
+  function removeBook(id: number) {
+    books.value = books.value.filter((b) => b.id !== id)
+  }
+
+  return { books, bookCount, addBook, removeBook }
 })
