@@ -4,8 +4,22 @@
   import { useRouter } from 'vue-router'
 
   const bookStore = useBookStore();
-  const route = useRoute();
   const router = useRouter();
+
+  const newTitle = ref('')
+  const newAuthor = ref('')
+
+  function handleAdd() {
+
+  }
+
+  function handleRemove() {
+
+  }
+
+  function handleSelect() {
+  
+  }
 </script>
 
 <template></template>
