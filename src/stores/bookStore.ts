@@ -23,5 +23,5 @@ export const useBookStore = defineStore('book', () => {
     return books.value.find((b) => b.id === id)
   }
 
-  return { books, bookCount, addBook, removeBook }
+  return { books, bookCount, addBook, removeBook, getBookById }
 })
