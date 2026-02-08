@@ -36,5 +36,5 @@ export const useBookStore = defineStore('book', () => {
     }
   }
 
-  return { books, bookCount, addBook, removeBook, getBookById, isLoading, errorMessage }
+  return { books, bookCount, addBook, removeBook, getBookById, isLoading, errorMessage, fetchBooks }
 })
