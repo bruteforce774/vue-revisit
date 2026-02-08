@@ -4,11 +4,9 @@ import { type Book } from '../types.ts'
 
 export const useBookStore = defineStore('book', () => {
   const books = ref<Book[]>([
-    { id: 1, title: 'Book A', author: 'Author A' },
-    { id: 2, title: 'Book B', author: 'Author B' }
   ])
 
-  let nextId = 3
+  let nextId = 1
   const bookCount = computed(() => books.value.length)
 
   function addBook(title: string, author: string) {
