@@ -3,7 +3,7 @@ import { defineStore } from 'pinia'
 import { type Book } from '../types.ts'
 
 export const useBookStore = defineStore('book', () => {
-  const books = ref<Book[]>
+  const books = ref<Book[]>([])
   const isLoading = ref(false)
   const errorMessage = ref<string | null>(null)
 
