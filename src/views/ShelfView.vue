@@ -4,6 +4,7 @@
   import { useRouter } from 'vue-router'
   import { ref } from 'vue'
   import BookList from '../components/BookList.vue'
+  import { onMounted } from 'vue'
 
   const bookStore = useBookStore();
   const router = useRouter();
@@ -27,6 +28,10 @@
   function handleSelect(id: number) {
     router.push({ name: 'book-detail', params: { id } })
   }
+
+  onMounted(() => {
+    bookStore.fetchBooks()
+  })
 </script>
 
 <template>
